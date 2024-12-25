@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedTilesComponent: {fileID: 73550133}
-  boatWaterTiles:
+  additionalAllowedTiles:
   - {fileID: 11400000, guid: ea56eece63aba35469fea812356c7a92, type: 2}
   - {fileID: 11400000, guid: 0230b48a2cd148149bf5502ca7328478, type: 2}
   - {fileID: 11400000, guid: fbc7e53732751274190a9ea1250192b4, type: 2}
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedTilesComponent: {fileID: 73550133}
-  boatWaterTiles:
+  additionalAllowedTiles:
   - {fileID: 11400000, guid: 546c35550ead79941af5f505fdd175ec, type: 2}
 --- !u!65 &615108941
 BoxCollider:

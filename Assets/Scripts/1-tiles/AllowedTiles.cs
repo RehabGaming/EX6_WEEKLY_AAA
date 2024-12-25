@@ -4,49 +4,35 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 /**
- * This component just keeps a list of allowed tiles.
+ * This component keeps a list of allowed tiles.
  * Such a list is used both for pathfinding and for movement.
  */
-public class AllowedTiles : MonoBehaviour  {
-    [SerializeField] TileBase[] allowedTiles = null;
+public class AllowedTiles : MonoBehaviour
+{
+    [SerializeField] private TileBase[] allowedTiles = null;
 
-    public bool Contains(TileBase tile) {
+    public bool Contains(TileBase tile)
+    {
         return allowedTiles.Contains(tile);
     }
 
-    public TileBase[] Get() { return allowedTiles;  }
-
-
-
-    // Add water tiles to the allowed tiles list
-    public void AddWaterTiles(TileBase[] waterTiles)
+    public TileBase[] Get()
     {
-        List<TileBase> updatedTiles = allowedTiles.ToList(); // Convert to List for modification
-        foreach (TileBase waterTile in waterTiles)
-        {
-            if (!updatedTiles.Contains(waterTile)) // Avoid duplicates
-            {
-                updatedTiles.Add(waterTile);
-            }
-        }
-        allowedTiles = updatedTiles.ToArray(); // Convert back to array
-        Debug.Log("Water tiles added to allowed tiles!");
+        return allowedTiles;
     }
 
-
-    // Add mountain tiles to the allowed tiles list
-    public void AddMountainTiles(TileBase[] mountainTiles)
+    // Add generic tiles to the allowed tiles list
+    public void AddAllowedTiles(TileBase[] tilesToAdd)
     {
         List<TileBase> updatedTiles = allowedTiles.ToList(); // Convert to List for modification
-        foreach (TileBase mountainTile in mountainTiles)
+        foreach (TileBase tile in tilesToAdd)
         {
-            if (!updatedTiles.Contains(mountainTile)) // Avoid duplicates
+            if (!updatedTiles.Contains(tile)) // Avoid duplicates
             {
-                updatedTiles.Add(mountainTile);
+                updatedTiles.Add(tile);
             }
         }
         allowedTiles = updatedTiles.ToArray(); // Convert back to array
-        Debug.Log("Mountain tiles added to allowed tiles!");
+        Debug.Log("New tiles added to allowed tiles!");
     }
 }
-

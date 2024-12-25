@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AFB5EFA4-BCC4-294D-341A-34C2D7BA56E6}</ProjectGuid>
+    <ProjectGuid>{9450F4FB-37DE-BE38-11FC-B2285BFFF5D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\1-tiles\AllowedTiles.cs" />
     <Compile Include="Assets\Scripts\2-player\ClickMover.cs" />
+    <Compile Include="Assets\Scripts\2-player\ObjectInteraction.cs" />
     <Compile Include="Assets\Scripts\0-bfs\BFS.cs" />
     <Compile Include="Assets\Scripts\2-player\AxeScript.cs" />
     <Compile Include="Assets\Scripts\2-player\KeyboardMover.cs" />
@@ -72,8 +73,6 @@
     <Compile Include="Assets\Scripts\4-generation\MeshRendererCaveGenerator.cs" />
     <Compile Include="Assets\Scripts\2-player\KeyboardMoverByTile.cs" />
     <Compile Include="Assets\Scripts\1-tiles\TileLogger.cs" />
-    <Compile Include="Assets\Scripts\2-player\BoatInteraction.cs" />
-    <Compile Include="Assets\Scripts\2-player\GoatScript.cs" />
     <Compile Include="Assets\Scripts\0-bfs\IGraph.cs" />
   </ItemGroup>
   <ItemGroup>
